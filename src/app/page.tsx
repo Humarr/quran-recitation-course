@@ -7,6 +7,7 @@ import QuranVerseSection from '@/components/QuranVerseSection';
 import OfferSection from '@/components/OfferSection';
 import GuaranteeSection from '@/components/GuaranteeSection';
 import FinalCTASection from '@/components/FinalCTASection';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <OfferSection />
       <GuaranteeSection />
       <FinalCTASection />
+      <WhatsAppFloat/>
     </main>
   );
 }
