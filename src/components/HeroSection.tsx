@@ -2,6 +2,11 @@ import CTAButton from './CTAButton';
 import Image from 'next/image';
 
 export default function HeroSection() {
+
+      const handleCheckout = () => {
+    // You can add pre-checkout logic here
+    router.push('/checkout');
+  };
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-primary bg-opacity-90 overflow-hidden">
             {/* Arabic pattern background */}
@@ -52,7 +57,7 @@ export default function HeroSection() {
                         </blockquote>
 
                         <div className="pt-4">
-                            <CTAButton size="xl" className="w-full lg:w-auto">
+                            <CTAButton size="xl" className="w-full lg:w-auto" onClick={handleCheckout}>
                                 Start Learning Now
                             </CTAButton>
                         </div>
