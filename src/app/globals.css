@@ -3,24 +3,99 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Custom colors */
+  --color-primary: #2A5B45;
+  --color-primary-light: #3D7B5F;
+  --color-primary-dark: #1E4532;
+
+  --color-secondary: #D4AF37;
+  --color-secondary-light: #E8C766;
+  --color-secondary-dark: #B8931C;
+
+  --color-accent: #F5F5DC;
+  --color-accent-light: #FFFEF2;
+  --color-accent-dark: #E0E0C8;
+
+  /* Scrollbar colors */
+  --scrollbar-track: var(--color-accent-light);
+  --scrollbar-thumb: var(--color-primary-light);
+  --scrollbar-thumb-hover: var(--color-primary);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Add all custom colors here as well */
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-dark: var(--color-primary-dark);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-light: var(--color-secondary-light);
+  --color-secondary-dark: var(--color-secondary-dark);
+
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+  --color-accent-dark: var(--color-accent-dark);
+
+  /* Scrollbar colors */
+  --scrollbar-track: var(--scrollbar-track);
+  --scrollbar-thumb: var(--scrollbar-thumb);
+  --scrollbar-thumb-hover: var(--scrollbar-thumb-hover);
+
+  /* Fonts */
+  --font-sans: var(--font-noto-sans);
+  --font-arabic: var(--font-noto-sans-arabic);
+  --font-display: var(--font-scheherazade-new);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --scrollbar-track: #1c1c1c;
+    --scrollbar-thumb: #3d7b5f;
+    --scrollbar-thumb-hover: #2a5b45;
   }
 }
 
+/* The rest stays the same */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
 }
