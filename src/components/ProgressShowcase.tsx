@@ -80,6 +80,7 @@ export default function ProgressShowcase() {
                     />
                 ))}
             </div>
+<div>{isPlaying}</div>
         </div>
     );
 }
