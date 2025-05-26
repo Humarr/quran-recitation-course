@@ -8,6 +8,7 @@ import OfferSection from '@/components/OfferSection';
 import GuaranteeSection from '@/components/GuaranteeSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import ProgressShowcase from '@/components/ProgressShowcase';
 
 export default function Home() {
   return (
@@ -17,11 +18,12 @@ export default function Home() {
       <WhyDifferentSection />
       <CourseModulesSection />
       <TestimonialsSection />
+      <ProgressShowcase />
       <QuranVerseSection />
       <OfferSection />
       <GuaranteeSection />
       <FinalCTASection />
-      <WhatsAppFloat/>
+      <WhatsAppFloat />
     </main>
   );
 }
