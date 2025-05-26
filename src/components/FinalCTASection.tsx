@@ -18,7 +18,7 @@ export default function FinalCTASection() {
             </div>
 
             <div className="bg-primary text-accent p-8 rounded-xl shadow-lg border-2 border-secondary relative overflow-hidden">
-              <div className="absolute -top-0.5 -right-4 bg-secondary text-primary-dark text-sm font-bold px-4 py-2 rounded-full transform rotate-12">
+              <div className="absolute top-4 -right-3 bg-secondary text-primary-dark text-xs font-bold px-4 py-2 rounded-full transform rotate-18">
                 Recommended
               </div>
               <h3 className="text-xl font-bold mb-4">2. Join the course now.</h3>
