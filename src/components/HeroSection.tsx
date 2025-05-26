@@ -1,13 +1,14 @@
-"use client";
+// "use client";
 import CTAButton from './CTAButton';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+// import { useRouter } from 'next/navigation';
 export default function HeroSection() {
-    const router = useRouter();
-      const handleCheckout = () => {
-    // You can add pre-checkout logic here
-    router.push('/checkout');
-  };
+    //     const router = useRouter();
+    //       const handleCheckout = () => {
+    //     // You can add pre-checkout logic here
+    //     router.push('/checkout');
+    //   };
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-primary bg-opacity-90 overflow-hidden">
             {/* Arabic pattern background */}
@@ -58,9 +59,14 @@ export default function HeroSection() {
                         </blockquote>
 
                         <div className="pt-4">
-                            <CTAButton size="xl" className="w-full lg:w-auto" onClick={handleCheckout}>
+                            {/* <CTAButton size="xl" className="w-full lg:w-auto" onClick={handleCheckout}>
                                 Start Learning Now
-                            </CTAButton>
+                            </CTAButton> */}
+                            <Link href="/checkout">
+                                <CTAButton size="xl" className="w-full lg:w-auto z-10">
+                                    Start Learning Now
+                                </CTAButton>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -78,15 +84,15 @@ export default function HeroSection() {
                     </div>
                 </div>
                 {/* Mobile version */}
-<div className="relative block lg:hidden z-10 mt-6">
-  <Image
-    src="/images/course-preview.jpg"
-    width={400}
-    height={300}
-    alt="Course preview"
-    className="rounded-xl w-full h-auto object-cover shadow-md"
-  />
-</div>
+                <div className="relative block lg:hidden z-10 mt-6">
+                    <Image
+                        src="/images/course-preview.jpg"
+                        width={400}
+                        height={300}
+                        alt="Course preview"
+                        className="rounded-xl w-full h-auto object-cover shadow-md"
+                    />
+                </div>
             </div>
         </section>
     );
