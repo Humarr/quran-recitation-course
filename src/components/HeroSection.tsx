@@ -14,7 +14,7 @@ export default function HeroSection() {
             {/* Arabic pattern background */}
             {/* <div className="absolute inset-0 bg-arabic-pattern bg-repeat opacity-10 mix-blend-overlay" /> */}
 
-            <div className="absolute inset-0 mix-blend-overlay opacity-40">
+            <div className="absolute inset-0 mix-blend-overlay opacity-40 pointer-events-none">
                 <div className="relative w-full h-full ">
                     <Image
                         src="/images/arabic-pattern-bg.jpg"
@@ -62,8 +62,8 @@ export default function HeroSection() {
                             {/* <CTAButton size="xl" className="w-full lg:w-auto" onClick={handleCheckout}>
                                 Start Learning Now
                             </CTAButton> */}
-                            <Link href="/checkout">
-                                <CTAButton size="xl" className="w-full lg:w-auto z-10">
+                            <Link className='z-10' href="/checkout">
+                                <CTAButton size="xl" className="w-full lg:w-auto ">
                                     Start Learning Now
                                 </CTAButton>
                             </Link>
