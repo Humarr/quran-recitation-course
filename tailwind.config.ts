@@ -27,7 +27,8 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-noto-sans)'],
         arabic: ['var(--font-noto-sans-arabic)'],
-        display: ['var(--font-scheherazade-new)'],
+        display: ['var(--font-poppins)'],
+        // display: ['var(--font-scheherazade-new)'],
       },
       backgroundImage: {
         'arabic-pattern': "url('/images/arabic-pattern-bg.png')",

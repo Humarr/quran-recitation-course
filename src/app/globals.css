@@ -48,7 +48,8 @@
   /* Fonts */
   --font-sans: var(--font-noto-sans);
   --font-arabic: var(--font-noto-sans-arabic);
-  --font-display: var(--font-scheherazade-new);
+  /* --font-display: var(--font-scheherazade-new); */
+  --font-display: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {

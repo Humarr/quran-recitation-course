@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Noto_Sans, Noto_Sans_Arabic, Scheherazade_New } from 'next/font/google';
+import { Noto_Sans, Noto_Sans_Arabic, Scheherazade_New, Poppins } from 'next/font/google';
 import './globals.css';
 
 const notoSans = Noto_Sans({
@@ -20,6 +20,12 @@ const scheherazade = Scheherazade_New({
   weight: ['400', '700'],
 });
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['400', '700'],
+});
+
 export const metadata: Metadata = {
   title: 'Quran Recitation for Absolute Beginners',
   description: 'A gentle, step-by-step program to help you read the Quran—even if you\'ve never read Arabic before',
@@ -32,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr" className={`${notoSans.variable} ${notoSansArabic.variable} ${scheherazade.variable}`}>
+    <html lang="en" dir="ltr" className={`${notoSans.variable} ${notoSansArabic.variable} ${scheherazade.variable} ${poppins.variable}`}>
       <body>
         {children}
       </body>
