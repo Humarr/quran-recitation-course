@@ -34,7 +34,7 @@ export default function ProgressShowcase() {
     const [isPlaying, setIsPlaying] = useState<'before' | 'after' | null>(null);
 
     return (
-        <div className="bg-primary-light rounded-xl p-6 shadow-lg">
+        <div className="bg-primary-light p-6 shadow-lg">
             <h3 className="text-2xl font-bold text-accent mb-6 text-center">
                 Hear Our Students&#39; Progress
             </h3>
